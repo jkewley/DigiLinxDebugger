@@ -1,0 +1,25 @@
+0.95 BETA   - Upgraded to VS.Net 2008
+            - Compile regex filters first time they're used
+            - Added more file logging options - log only included packet types and obey filters for logging
+            - Added icon resources for future use
+            - Turned load device information over HTTP back on and made more efficient through use of ping
+            - Refactored more code to DigiLinXLibrary from Debugger
+            - Added more filters and enabled them by default
+            - Added Device Detail Form for future use
+            
+0.9 BETA    - Allow user to select specific network interface to use for tracing
+            - Refactored network code to DigiLinXLibrary
+            
+0.8 BETA    - Changed UDP Client to use asynchronous sockets
+            - Added ability to filter messages by Regular Expression pattern, including or excluding based upon patterns
+            - Rearranged some UI elements
+            - DebuggerForm code refactoring
+
+0.75 BETA   - Added clear button to clear the grids
+            - Added more detailed view for driver messages that organizes by category
+            - Added support for large systems
+            - Added tooltip help to various places
+            - Added icon
+
+0.6 BETA    - Added GUI tab and support for capturing GUI messages
+            - Added License file and this change log

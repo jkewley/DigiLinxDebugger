@@ -1,0 +1,166 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20BE8223-8AF6-4B93-9D0C-7B26EE7B6B2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DigiLinXLibrary</RootNamespace>
+    <AssemblyName>DigiLinXLibrary</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Device\Support\NetworkInfo.cs" />
+    <Compile Include="Device\ControlLinX.cs" />
+    <Compile Include="Device\Base\DigiLinxDevice.cs" />
+    <Compile Include="Device\DigiLinxDeviceLoader.cs" />
+    <Compile Include="Device\DoorLinX.cs" />
+    <Compile Include="Device\MediaLinX.cs" />
+    <Compile Include="Device\SpeakerLinX.cs" />
+    <Compile Include="Network\DeviceDirectLoader.cs" />
+    <Compile Include="Network\DigiLinXMulticastClient.cs" />
+    <Compile Include="Network\Logging\IDigiLinXPacketLogger.cs" />
+    <Compile Include="Network\Logging\ILogger.cs" />
+    <Compile Include="Network\Packets\DriverPacket.cs" />
+    <Compile Include="Network\Packets\ErrorPacket.cs" />
+    <Compile Include="Network\Packets\GUIPacket.cs" />
+    <Compile Include="Network\Packets\InfoPacket.cs" />
+    <Compile Include="Network\Packets\NetStreamsPacket.cs" />
+    <Compile Include="Network\Packets\PacketFactory.cs" />
+    <Compile Include="Network\Packets\WarningPacket.cs" />
+    <Compile Include="Project\Service.cs" />
+    <Compile Include="Device\TouchLinX.cs" />
+    <Compile Include="Project\CameraGUI.cs" />
+    <Compile Include="Project\Collections\MacroList.cs" />
+    <Compile Include="Project\Collections\NonStreamNetList.cs" />
+    <Compile Include="Project\Collections\GroupList.cs" />
+    <Compile Include="NetStreamsProject.cs" />
+    <Compile Include="ProjectLoader.cs" />
+    <Compile Include="Project\Collections\CameraGUIList.cs" />
+    <Compile Include="Project\Client.cs" />
+    <Compile Include="Project\Collections\PresetList.cs" />
+    <Compile Include="Project\Dealer.cs" />
+    <Compile Include="Project\Collections\DeviceList.cs" />
+    <Compile Include="Project\Collections\DoorLinXGUIList.cs" />
+    <Compile Include="Project\Collections\GUI.cs" />
+    <Compile Include="Project\Base\ProjectEntity.cs" />
+    <Compile Include="Project\Base\ProjectEntityList.cs" />
+    <Compile Include="Project\Collections\RoomList.cs" />
+    <Compile Include="Project\Collections\SourceList.cs" />
+    <Compile Include="Project\DoorLinXGUI.cs" />
+    <Compile Include="Project\Macro.cs" />
+    <Compile Include="Project\Preset.cs" />
+    <Compile Include="Project\Room.cs" />
+    <Compile Include="Project\Source.cs" />
+    <Compile Include="UI\AudioScreen.cs" />
+    <Compile Include="UI\CamerasScreen.cs" />
+    <Compile Include="UI\FavoritesScreen.cs" />
+    <Compile Include="UI\GenericScreen.cs" />
+    <Compile Include="UI\HVACScreen.cs" />
+    <Compile Include="UI\IntercomScreen.cs" />
+    <Compile Include="UI\LocationsScreen.cs" />
+    <Compile Include="UI\Base\MenuItem.cs" />
+    <Compile Include="UI\MenuItems\ButtonItem.cs" />
+    <Compile Include="UI\MenuItems\CameraItem.cs" />
+    <Compile Include="UI\MenuItems\FavoriteItem.cs" />
+    <Compile Include="UI\MenuItems\GroupMenuItem.cs" />
+    <Compile Include="UI\MenuItems\HVACIndicatorItem.cs" />
+    <Compile Include="UI\MenuItems\IntercomMenuItem.cs" />
+    <Compile Include="UI\Menu.cs" />
+    <Compile Include="UI\MenuItems\MonitorMenuItem.cs" />
+    <Compile Include="UI\MenuItems\RendererMenuItem.cs" />
+    <Compile Include="UI\MenuItems\SourceMenuItem.cs" />
+    <Compile Include="UI\MenuItems\TVControlItem.cs" />
+    <Compile Include="UI\PanoramaScreen.cs" />
+    <Compile Include="UI\Base\Screen.cs" />
+    <Compile Include="Project\SystemInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Project\Collections\SubscriberList.cs" />
+    <Compile Include="UI\ScreenFactory.cs" />
+    <Compile Include="UI\SourcesScreen.cs" />
+    <Compile Include="UI\ZonesScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Screens\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
